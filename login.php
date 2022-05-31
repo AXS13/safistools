@@ -13,7 +13,7 @@
         // Vérifier que l'utilisateur demandé existe en BDD et récupérer cet utilisateur
         try
         {
-            $bdd = new PDO('mysql:host=127.0.0.1:3306;dbname=tpticket;charset=utf8', 'root', '');
+            $bdd = new PDO('mysql:host=mysql-safimohamed.alwaysdata.net;dbname=safimohamed_tpticket;charset=utf8', '261858', 'safi1809');
         }
         catch (Exception $e)
         {
@@ -23,7 +23,7 @@
         $req = $bdd->prepare('SELECT * FROM users WHERE username = :pseudo');
         $req->execute(
             array(
-                'pseudo' => $pseudo
+                'pseudo' => htmlspecialchars($pseudo)
             )
         );
 
