@@ -10,7 +10,7 @@
 
     try
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=tpticket;charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=127.0.0.1;dbname=tpticket;charset=utf8', 'root', '');
     }
     catch (Exception $e)
     {
